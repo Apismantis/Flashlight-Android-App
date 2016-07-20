@@ -178,7 +178,7 @@ public class HomeActivity extends AppCompatActivity {
         showHideTwinkleSetting(flashMode);
 
         // Check flash support && flashlight status
-        if (!IsFlashlightOn && IsSupportFlash) {
+        if (!IsFlashlightOn) {
             showCustomToast("Please turn on flashlight before");
             return;
         }
