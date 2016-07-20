@@ -437,7 +437,7 @@ public class HomeActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (sharePreManager.isDontRemind())
+        if (!IsFlashlightOn || sharePreManager.isDontRemind())
             super.onBackPressed();
         else {
             // Show dialog
