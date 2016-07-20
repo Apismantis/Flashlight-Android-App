@@ -1,0 +1,180 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.blueeagle.flashlight.HomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/light_status_icon" />
+
+            <TextView
+                android:id="@+id/tvLightStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Flashlight off"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1">
+
+        <RelativeLayout
+            android:id="@+id/btnTurnOnOffLight"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:alpha="0.6"
+                android:background="@drawable/circle_back_ground" />
+
+            <View
+                android:layout_width="115dp"
+                android:layout_height="115dp"
+                android:layout_centerInParent="true"
+                android:alpha="0.6"
+                android:background="@drawable/circle_back_ground" />
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/circle_back_ground" />
+
+            <ImageView
+                android:id="@+id/imvLightBuld"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:scaleType="centerInside"
+                android:src="@drawable/light_on" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RadioGroup
+            android:id="@+id/rbgMode"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/rectangle_back_ground"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbFlash"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector_left_back"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Flash"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/rbScreen"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector_default_back"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Screen"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/rbTwinkle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector_default_back"
+                android:button="@null"
+                android:gravity="center"
+                android:text="Twinkle"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/rbSOS"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/toggle_selector_right_back"
+                android:button="@null"
+                android:gravity="center"
+                android:text="SOS"
+                android:textColor="@android:color/white" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/twinkleSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTwinkleMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:text="Blinking time is 0.1s"
+                android:textColor="@color/colorAccent" />
+
+            <SeekBar
+                android:id="@+id/sbTwinkleTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="2000"
+                android:progress="100" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
